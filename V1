@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLOW Consultoria | CX e Vendas para Varejo</title>
+    <!-- Carrega Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-primary: #ff5722; /* Laranja Vibrante */
+            --color-secondary: #1f2937; /* Cinza Escuro */
+            --color-background: #000000; /* Preto Puro */
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--color-background);
+            color: #d1d5db; /* Texto principal em cinza claro */
+        }
+        .flow-gradient {
+            background: linear-gradient(90deg, #ff7043 0%, #ff5722 50%, #e64a19 100%);
+        }
+        .flow-text-gradient {
+            background: linear-gradient(90deg, #ff7043, #ff5722);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent;
+        }
+        .cta-button {
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 87, 34, 0.4);
+        }
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(255, 87, 34, 0.6);
+        }
+        /* Efeito de destaque para cards/serviços */
+        .card-glow {
+            border: 1px solid transparent;
+            background-color: #1a1a1a;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .card-glow:hover {
+            border-color: #ff5722;
+            transform: translateY(-4px);
+            box-shadow: 0 10px 20px rgba(255, 87, 34, 0.2);
+        }
+        .header-bg {
+             background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8) 100%);
+        }
+        /* Estilo para ícones SVG */
+        .icon-challenge {
+            color: var(--color-primary);
+        }
+    </style>
+</head>
+<body class="bg-gray-950 min-h-screen antialiased">
+
+    <!-- Header / Navegação -->
+    <header class="sticky top-0 z-50 header-bg backdrop-blur-sm shadow-lg border-b border-orange-500/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <!-- Logo FLOW -->
+            <a href="#" class="text-3xl font-extrabold tracking-tight flow-text-gradient">FLOW</a>
+            
+            <!-- CTA de Ação Rápida (Sempre Visível) -->
+            <a href="#contato" class="hidden sm:inline-block bg-orange-600 px-4 py-2 rounded-full text-white text-sm hover:bg-orange-700 transition duration-300 cta-button">
+                Fale com um Especialista
+            </a>
+
+            <!-- Menu Mobile (Icone) - Simplificado, apenas CTA direto para o topo/contato -->
+            <a href="#contato" class="sm:hidden text-orange-500 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+            </a>
+        </div>
+    </header>
+
+    <!-- HERO SECTION - FASE 1: O QUIZ CONDICIONAL -->
+    <section class="relative pt-24 pb-32 overflow-hidden text-center min-h-[80vh] flex items-center">
+        <!-- Fundo gradiente sutil -->
+        <div class="absolute inset-0 opacity-10" style="background: radial-gradient(circle at center, rgba(255, 87, 34, 0.1) 0%, transparent 60%);"></div>
+        <div class="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Título Principal (Copy Forte e Direta) -->
+            <h1 class="text-5xl sm:text-7xl font-extrabold leading-tight mb-4">
+                <span class="flow-text-gradient">CX para Varejo.</span> Não Marketing Tradicional.
+            </h1>
+
+            <!-- Pergunta (DOR) -->
+            <h2 class="text-xl sm:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto font-medium">
+                Seu lucro está estagnado? **Identifique o seu principal gargalo** e veja como a FLOW resolve.
+            </h2>
+
+            <!-- Cards de Desafios (O Quiz) -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                
+                <!-- Desafio 1: Atendimento e Vendas (Fricção) -->
+                <div class="challenge-card card-glow p-8 rounded-xl border-t-4 border-orange-500/50" data-challenge="vendas">
+                    <div class="icon-challenge text-4xl mb-4 mx-auto">
+                        <svg class="w-10 h-10 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-white mb-2">Vendas e Atendimento</h3>
+                    <p class="text-gray-400 text-sm">Minha equipe não converte e o WhatsApp é um caos de mensagens sem padrão.</p>
+                </div>
+
+                <!-- Desafio 2: Omnichannel (Desalinhamento) -->
+                <div class="challenge-card card-glow p-8 rounded-xl border-t-4 border-orange-500/50" data-challenge="omnichannel">
+                    <div class="icon-challenge text-4xl mb-4 mx-auto">
+                        <svg class="w-10 h-10 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a8 8 0 110-16 8 8 0 010 16z"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-white mb-2">Canais e Tecnologia</h3>
+                    <p class="text-gray-400 text-sm">Meus canais (físico, digital, e-comm) não conversam e há muito atrito na jornada do cliente.</p>
+                </div>
+
+                <!-- Desafio 3: Estrutura (Organização e Crescimento) -->
+                <div class="challenge-card card-glow p-8 rounded-xl border-t-4 border-orange-500/50" data-challenge="estrutura">
+                    <div class="icon-challenge text-4xl mb-4 mx-auto">
+                        <svg class="w-10 h-10 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a1 1 0 00.867 1.428l7.213-.444m-7.213-.444l7.854 2.502m-13.842 1.488L5.132 18m2.23-1.488h1.834m-3.464 0H4.375m0 0l-.364-.727M16 4h4a2 2 0 012 2v10a2 2 0 01-2 2h-4m-12 0h12v-6H4v6z"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-white mb-2">Organização e Processos</h3>
+                    <p class="text-gray-400 text-sm">Trabalho muito e o lucro não cresce. Preciso de um diagnóstico e de processos organizados.</p>
+                </div>
+            </div>
+
+            <p class="text-sm text-gray-500 mt-8">Clique no seu desafio para ver a solução personalizada da FLOW.</p>
+        </div>
+    </section>
+
+    <!-- DYNAMIC CONTENT SECTION - FASE 2: CONTEÚDO ADAPTADO -->
+    <section id="dynamic-content" class="py-20 sm:py-28 bg-gray-900 border-t border-orange-500/20 hidden opacity-0 transition-opacity duration-1000">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <p id="dynamic-tag" class="text-xl text-orange-500 font-semibold mb-3">Solução FLOW para [Desafio]</p>
+                <h2 id="dynamic-title" class="text-4xl sm:text-5xl font-extrabold text-white">
+                    Como a <span class="flow-text-gradient">FLOW</span> te ajuda a [Atingir o Objetivo].
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+                
+                <!-- CARD PRINCIPAL: O QUE FAZEMOS -->
+                <div class="relative p-8 rounded-xl bg-gray-800 shadow-2xl shadow-orange-900/50">
+                    <h3 class="text-2xl font-extrabold flow-text-gradient mb-4">Metodologia Exclusiva:</h3>
+                    <p id="dynamic-core-promise" class="text-gray-300 text-lg mb-6">
+                        [Promessa Central adaptada ao desafio].
+                    </p>
+                    
+                    <h4 class="text-xl font-semibold text-white mb-4">Você terá:</h4>
+                    <ul id="dynamic-benefits" class="space-y-3 text-gray-400">
+                        <!-- Benefícios serão injetados aqui -->
+                    </ul>
+                </div>
+
+                <!-- CARD SECUNDÁRIO: O DIFERENCIAL -->
+                <div class="p-8 rounded-xl bg-gray-800/50 border border-orange-500/30">
+                    <h3 class="text-2xl font-bold text-white mb-4">Nosso Diferencial: Por que FLOW?</h3>
+                    <p class="text-gray-400 mb-6">Não somos agência, não somos marketing genérico. Somos o **Consultor que arruma a casa** no varejo: da porta à entrega.</p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-3">
+                            <span class="text-orange-500 text-xl font-extrabold flex-shrink-0 mt-1">💡</span>
+                            <div>
+                                <p class="text-white font-medium">Credibilidade Automática</p>
+                                <span class="text-sm text-gray-500">Visão real de quem já trabalhou em varejo de supermercados.</span>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <span class="text-orange-500 text-xl font-extrabold flex-shrink-0 mt-1">⚙️</span>
+                            <div>
+                                <p class="text-white font-medium">Foco no Simples e Implementável</p>
+                                <span class="text-sm text-gray-500">Capacidade de identificar gaps rapidamente (Diagnóstico Rápido).</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            
+            <!-- FASE 3: CTA DE ALTA CONVERSÃO ADAPTADO -->
+            <div class="mt-20 text-center" id="contato">
+                 <h3 id="dynamic-cta-headline" class="text-3xl font-extrabold text-white mb-6">
+                    [Chamada para Ação Final]
+                </h3>
+                <a href="mailto:contato@flowconsultoria.com" id="dynamic-cta-button" class="cta-button bg-orange-600 text-white font-bold py-4 px-12 rounded-full text-xl hover:bg-orange-700 uppercase tracking-widest">
+                    Quero Arrumar a Casa e Vender Mais!
+                </a>
+                <p class="text-sm text-gray-500 mt-3">Fale conosco e comece com o Diagnóstico de Jornada e Experiência.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- JS para o Funil Condicional e Scroll -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const challengeCards = document.querySelectorAll('.challenge-card');
+            const dynamicContent = document.getElementById('dynamic-content');
+            const dynamicTag = document.getElementById('dynamic-tag');
+            const dynamicTitle = document.getElementById('dynamic-title');
+            const dynamicCorePromise = document.getElementById('dynamic-core-promise');
+            const dynamicBenefits = document.getElementById('dynamic-benefits');
+            const dynamicCtaHeadline = document.getElementById('dynamic-cta-headline');
+            const dynamicCtaButton = document.getElementById('dynamic-cta-button');
+
+            // Mapeamento do conteúdo para cada desafio
+            const contentMap = {
+                vendas: {
+                    tag: "Solução FLOW para VENDAS E ATENDIMENTO",
+                    title: "Com a FLOW, você aumenta a conversão e zera o atrito no balcão e no WhatsApp.",
+                    promise: "Nosso foco é na **Estruturação do Atendimento e Vendas**. Implementamos fluxos, padronizamos mensagens e treinamos sua equipe para que cada contato se torne uma venda qualificada. Transformamos seu WhatsApp de caos em um canal de lucro.",
+                    benefits: [
+                        "Fluxos de atendimento, scripts e boas práticas padronizadas.",
+                        "Treinamento de vendedores focado em métricas de conversão.",
+                        "Integração de atendimento e CRM para monitoramento.",
+                        "Início com Diagnóstico Rápido (Cliente Oculto no WhatsApp e Presencial)."
+                    ],
+                    ctaHeadline: "Pare de Perder Vendas por Falhas no Atendimento. Fale com a FLOW.",
+                    ctaButtonText: "Quero Treinar Minha Equipe e Aumentar a Conversão"
+                },
+                omnichannel: {
+                    tag: "Solução FLOW para CANAIS E OMNICHANNEL",
+                    title: "Integre seus canais (físico e digital) e entregue uma Experiência Unificada e Coerente.",
+                    promise: "Nós garantimos que todos os seus pontos de contato — WhatsApp, e-commerce, Instagram e loja física — estejam perfeitamente alinhados em ofertas, preços e, principalmente, experiência de marca. Acabamos com o 'Caos Omnichannel'.",
+                    benefits: [
+                        "Implementação de Estratégias Omnichannel (qual canal usar e como).",
+                        "Alinhamento de Branding (posicionamento, linguagem, experiência) em todos os pontos.",
+                        "Integração da jornada digital + física sem atrito para o cliente.",
+                        "Diagnóstico de Canais e Avaliação Digital (Instagram, Google, Site)."
+                    ],
+                    ctaHeadline: "Seu Cliente Exige Canais Alinhados. Construa o seu Omnichannel com a FLOW.",
+                    ctaButtonText: "Quero Unificar Minha Experiência Omnichannel Agora"
+                },
+                estrutura: {
+                    tag: "Solução FLOW para ORGANIZAÇÃO E PROCESSOS",
+                    title: "ARRUMAMOS A CASA: Processos, Estrutura e Acompanhamento para Lucro Constante.",
+                    promise: "Utilizamos a metodologia FLOW (Diagnóstico Rápido + Estrutura + Implementação Simples) para eliminar gargalos, otimizar processos internos e garantir que o seu varejo tenha uma base sólida para crescer. Seu foco volta para o negócio, o nosso é no fluxo.",
+                    benefits: [
+                        "Diagnóstico de Jornada e Experiência (Mapa de Oportunidades).",
+                        "Estruturação de Processos e Implementação Simples de Tecnologia (CRM/fluxos).",
+                        "Oferta de Acompanhamento Recorrente para ajustes contínuos e crescimento.",
+                        "Foco no simples, prático e na experiência superior do início ao fim."
+                    ],
+                    ctaHeadline: "Sua Empresa Precisa de Organização para Crescer. Solicite o Diagnóstico de Estrutura.",
+                    ctaButtonText: "Quero o Diagnóstico Rápido e Arrumar a Casa"
+                }
+            };
+
+            // Função para renderizar e rolar
+            const handleChallengeClick = (event) => {
+                const targetCard = event.currentTarget;
+                const challengeKey = targetCard.getAttribute('data-challenge');
+                const content = contentMap[challengeKey];
+
+                if (content) {
+                    // 1. Atualiza o conteúdo dinâmico
+                    dynamicTag.textContent = content.tag;
+                    dynamicTitle.innerHTML = content.title.replace("FLOW", `<span class="flow-text-gradient">FLOW</span>`);
+                    dynamicCorePromise.innerHTML = content.promise;
+
+                    // 2. Atualiza os benefícios (lista)
+                    dynamicBenefits.innerHTML = ''; // Limpa a lista
+                    content.benefits.forEach(benefit => {
+                        const li = document.createElement('li');
+                        li.className = 'flex items-start space-x-3';
+                        li.innerHTML = `<span class="text-orange-500 text-xl font-extrabold flex-shrink-0">✓</span><p>${benefit}</p>`;
+                        dynamicBenefits.appendChild(li);
+                    });
+
+                    // 3. Atualiza o CTA
+                    dynamicCtaHeadline.textContent = content.ctaHeadline;
+                    dynamicCtaButton.textContent = content.ctaButtonText;
+                    
+                    // 4. Mostra o conteúdo
+                    dynamicContent.classList.remove('hidden');
+                    setTimeout(() => dynamicContent.classList.remove('opacity-0'), 10); // Fade in effect
+                    
+                    // 5. Scroll suave para o conteúdo dinâmico
+                    dynamicContent.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            };
+
+            // Adiciona o listener a todos os cards
+            challengeCards.forEach(card => {
+                card.addEventListener('click', handleChallengeClick);
+            });
+        });
+    </script>
+</body>
+</html>
+
